@@ -7,13 +7,14 @@ const {
   deleteGoal,
 } = require("../controllers/goalController");
 
-router.get("/", getGoals);
+const { protect } = require("../middleware/authMiddleware");
+router.get("/", protect, getGoals);
 
-router.post("/", setGoal);
+router.post("/", protect, setGoal);
 
-router.put("/:id", updateGoal);
+router.put("/:id", protect, updateGoal);
 
-router.delete("/:id", deleteGoal);
+router.delete("/:id", protect, deleteGoal);
 
 // Can use following insted of up four requests
 // router.route('/').get(getGoals).post(setGoal)
