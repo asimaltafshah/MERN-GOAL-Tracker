@@ -1,5 +1,12 @@
 # MEARN App
 
+# .env
+
+create `.env` file and place following variable in it
+
+MONGO_URI = 'URI of your mongo database with password and database name'
+JWT_SECRET= 'secret key of your choice'
+
 # Server.js
 
 main file of Server
@@ -7,7 +14,7 @@ main file of Server
 # Routers
 
 `goalRoutes` router for _GET_, _POST_, _PUT_ and _DELETE_ request
-`userRoutes`
+`userRoutes` router
 
 # Controller
 
